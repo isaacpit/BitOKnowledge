@@ -1,24 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ET4-lk-4EN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="BitOKnowledge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Uh-UN-F8a">
+                                <rect key="frame" x="37.5" y="283.5" width="300" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zCo-DE-VXf">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hf-c7-aNR">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="gr4-91-dIn"/>
+                                                    <constraint firstAttribute="height" constant="100" id="hoH-Tu-lgX"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="307-fC-u0X">
+                                                <rect key="frame" x="120" y="36.5" width="60" height="27"/>
+                                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="27"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd1-hv-45T">
+                                                <rect key="frame" x="180" y="0.0" width="120" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="RsM-in-FNl"/>
+                                                    <constraint firstAttribute="height" constant="100" id="oND-vy-Kkw"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="4tX-a8-IVk"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIT O KNOWLEDGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut6-Gz-S5z">
+                                <rect key="frame" x="12" y="139" width="351.5" height="44.5"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V21-4e-HUw">
+                                <rect key="frame" x="109" y="442" width="157" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5998535156" green="0.0" blue="0.88302951389999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eH0-kB-OMr"/>
+                                    <action selector="submitPressed:" destination="gYO-yn-RhZ" eventType="primaryActionTriggered" id="z5g-AG-k2D"/>
+                                    <segue destination="gYO-yn-RhZ" kind="show" id="m8d-qe-cQs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Uh-UN-F8a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MD8-fP-bDc"/>
+                            <constraint firstItem="ut6-Gz-S5z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="UGJ-hH-If7"/>
+                            <constraint firstItem="ut6-Gz-S5z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YZN-p6-tvQ"/>
+                            <constraint firstItem="5Uh-UN-F8a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dKd-aq-Dga"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="K73-SH-2bK"/>
+                    <connections>
+                        <outlet property="FromPicker" destination="2Hf-c7-aNR" id="QI7-8N-7Qd"/>
+                        <outlet property="ToPicker" destination="yd1-hv-45T" id="cX3-NU-V3K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="117.39130434782609"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="99g-tP-cVd">
+            <objects>
+                <viewController id="gYO-yn-RhZ" customClass="GameViewController" customModule="BitOKnowledge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t0B-9O-MP7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Binary Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bt-h3-Fh3">
+                                <rect key="frame" x="32.5" y="205" width="312.5" height="40"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="v2x-3m-coP" userLabel="User Input">
+                                <rect key="frame" x="88.5" y="292" width="198.5" height="84"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBh-Rv-QGf">
+                                        <rect key="frame" x="0.0" y="0.0" width="198.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="value" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5U-XI-JDK">
+                                        <rect key="frame" x="0.5" y="30" width="198" height="54"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NBh-Rv-QGf" firstAttribute="centerX" secondItem="v2x-3m-coP" secondAttribute="centerX" id="NUA-UX-vKY"/>
+                                    <constraint firstItem="t5U-XI-JDK" firstAttribute="width" secondItem="NBh-Rv-QGf" secondAttribute="width" id="gbQ-U5-Qig"/>
+                                </constraints>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actual Value: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiD-gf-8MS">
+                                <rect key="frame" x="68" y="594.5" width="104" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VALUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9V-ft-Wa9">
+                                <rect key="frame" x="228" y="593.5" width="100" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0H-3g-WxP">
+                                <rect key="frame" x="116" y="444" width="157" height="70.5"/>
+                                <color key="backgroundColor" red="0.599853515625" green="0.0" blue="0.88302951388888884" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitPressed:" destination="gYO-yn-RhZ" eventType="primaryActionTriggered" id="aPI-fm-PmR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6t-5l-NDB">
+                                <rect key="frame" x="31" y="85" width="141" height="25"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="115" translatesAutoresizingMaskIntoConstraints="NO" id="9oP-K2-ctp">
+                                <rect key="frame" x="214" y="85" width="79.5" height="25"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct Type: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3K-Cw-xAa">
+                                <rect key="frame" x="66" y="168" width="244" height="33"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.71685112847222221" blue="0.3791232638888889" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="y0H-3g-WxP" firstAttribute="top" secondItem="v2x-3m-coP" secondAttribute="bottom" constant="68" id="9HA-bj-JPY"/>
+                            <constraint firstItem="O6t-5l-NDB" firstAttribute="trailing" secondItem="HiD-gf-8MS" secondAttribute="trailing" id="AMD-z0-BZ2"/>
+                            <constraint firstItem="v2x-3m-coP" firstAttribute="centerY" secondItem="t0B-9O-MP7" secondAttribute="centerY" id="Ec4-FV-lj8"/>
+                            <constraint firstItem="8Bt-h3-Fh3" firstAttribute="top" secondItem="J3K-Cw-xAa" secondAttribute="bottom" constant="4" id="Nlm-DY-QFv"/>
+                            <constraint firstItem="y0H-3g-WxP" firstAttribute="leading" secondItem="5Ay-Lo-Sj8" secondAttribute="leading" constant="116" id="PGr-lc-ENg"/>
+                            <constraint firstItem="HiD-gf-8MS" firstAttribute="leading" secondItem="5Ay-Lo-Sj8" secondAttribute="leading" constant="68" id="Za0-6E-xc1"/>
+                            <constraint firstItem="5Ay-Lo-Sj8" firstAttribute="trailing" secondItem="R9V-ft-Wa9" secondAttribute="trailing" constant="47" id="Zi1-CO-JLS"/>
+                            <constraint firstItem="J3K-Cw-xAa" firstAttribute="top" secondItem="t0B-9O-MP7" secondAttribute="top" constant="168" id="bAe-20-UaC"/>
+                            <constraint firstItem="J3K-Cw-xAa" firstAttribute="centerX" secondItem="t0B-9O-MP7" secondAttribute="centerX" id="cHc-yW-d8y"/>
+                            <constraint firstItem="R9V-ft-Wa9" firstAttribute="leading" secondItem="HiD-gf-8MS" secondAttribute="trailing" constant="56" id="cTi-hK-ceL"/>
+                            <constraint firstItem="5Ay-Lo-Sj8" firstAttribute="trailing" secondItem="9oP-K2-ctp" secondAttribute="trailing" constant="81.5" id="chk-Jn-XrN"/>
+                            <constraint firstItem="5Ay-Lo-Sj8" firstAttribute="bottom" secondItem="R9V-ft-Wa9" secondAttribute="bottom" constant="53" id="ci1-e7-xds"/>
+                            <constraint firstItem="J3K-Cw-xAa" firstAttribute="centerX" secondItem="8Bt-h3-Fh3" secondAttribute="centerX" id="eGs-sx-A3t"/>
+                            <constraint firstItem="5Ay-Lo-Sj8" firstAttribute="bottom" secondItem="HiD-gf-8MS" secondAttribute="bottom" constant="52" id="ftX-sR-a0F"/>
+                            <constraint firstItem="9oP-K2-ctp" firstAttribute="leading" secondItem="O6t-5l-NDB" secondAttribute="trailing" constant="42" id="hPd-yB-bmV"/>
+                            <constraint firstItem="5Ay-Lo-Sj8" firstAttribute="trailing" secondItem="y0H-3g-WxP" secondAttribute="trailing" constant="102" id="kuE-56-7LG"/>
+                            <constraint firstItem="O6t-5l-NDB" firstAttribute="leading" secondItem="5Ay-Lo-Sj8" secondAttribute="leading" constant="31" id="lFq-k9-RfF"/>
+                            <constraint firstItem="9oP-K2-ctp" firstAttribute="baseline" secondItem="O6t-5l-NDB" secondAttribute="baseline" id="nTE-vb-UHf"/>
+                            <constraint firstItem="R9V-ft-Wa9" firstAttribute="top" secondItem="y0H-3g-WxP" secondAttribute="bottom" constant="79" id="o8r-yE-QbZ"/>
+                            <constraint firstItem="O6t-5l-NDB" firstAttribute="top" secondItem="5Ay-Lo-Sj8" secondAttribute="top" constant="21" id="pqD-CV-LZ8"/>
+                            <constraint firstItem="v2x-3m-coP" firstAttribute="centerX" secondItem="t0B-9O-MP7" secondAttribute="centerX" id="ySO-af-cvT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Ay-Lo-Sj8"/>
+                    </view>
+                    <connections>
+                        <outlet property="CorrectTypeLbl" destination="J3K-Cw-xAa" id="mDb-Gf-0qW"/>
+                        <outlet property="GuessTypeLbl" destination="NBh-Rv-QGf" id="hrS-6c-mje"/>
+                        <outlet property="LivesLbl" destination="9oP-K2-ctp" id="Y1A-Vj-AeG"/>
+                        <outlet property="NumberDisplay" destination="8Bt-h3-Fh3" id="ceg-UV-eco"/>
+                        <outlet property="ScoreLbl" destination="O6t-5l-NDB" id="x7s-Nd-fpe"/>
+                        <outlet property="SubmitBtn" destination="y0H-3g-WxP" id="nQD-HN-Afa"/>
+                        <outlet property="UserGuess" destination="t5U-XI-JDK" id="0Me-Xr-Eon"/>
+                        <outlet property="debugOutput" destination="R9V-ft-Wa9" id="GFh-Wz-95i"/>
+                        <outlet property="scoreLbl" destination="O6t-5l-NDB" id="RYg-8L-fR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdb-BK-GLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2037.5999999999999" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iMd-tO-mEE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ET4-lk-4EN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qgA-qC-qiK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ssy-c7-xOR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AkZ-Fa-VfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
